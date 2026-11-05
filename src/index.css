@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #F8FAFC;
+    color: #0F172A;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Inclusive Accessibility Modes */
+html.a11y-large-text {
+  font-size: 18px;
+}
+
+html.a11y-large-text body {
+  letter-spacing: 0.02em;
+  word-spacing: 0.08em;
+  line-height: 1.75;
+}
+
+html.a11y-high-contrast body {
+  background-color: #0B1120;
+  color: #F8FAFC;
+}
+
+html.a11y-high-contrast .surface-card {
+  background-color: #131C31 !important;
+  border-color: #FACC15 !important;
+  color: #F8FAFC !important;
+}
+
+html.a11y-high-contrast .surface-subtle {
+  background-color: #1E293B !important;
+  border-color: #475569 !important;
+  color: #F8FAFC !important;
+}
+
+html.a11y-high-contrast .text-muted-adaptive {
+  color: #CBD5E1 !important;
+}
+
+html.a11y-high-contrast .btn-primary-adaptive {
+  background-color: #FACC15 !important;
+  color: #0B1120 !important;
+}
+
+html.a11y-focus-mode .decorative-only {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+}

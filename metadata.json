@@ -1,0 +1,6 @@
+{
+  "name": "Descobridores de Paço de Arcos",
+  "description": "Plataforma educativa gamificada e inclusiva para alunos do 4.º e 5.º ano do Agrupamento de Escolas de Paço de Arcos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
