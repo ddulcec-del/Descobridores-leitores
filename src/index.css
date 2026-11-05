@@ -63,8 +63,33 @@ html.a11y-high-contrast .btn-primary-adaptive {
   color: #0B1120 !important;
 }
 
+@keyframes focusCardPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(2, 132, 199, 0.38);
+  }
+}
+
 html.a11y-focus-mode .decorative-only {
   display: none !important;
+}
+
+html.a11y-focus-mode main .surface-card {
+  border-color: #0284C7;
+  animation: focusCardPulse 4s ease-in-out infinite;
+}
+
+html.a11y-focus-mode.a11y-high-contrast main .surface-card {
+  border-color: #FACC15 !important;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.35);
+  animation: none;
+}
+
+html.a11y-focus-mode :focus-visible {
+  outline: 3px solid #0284C7;
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
