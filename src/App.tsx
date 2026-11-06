@@ -49,6 +49,11 @@ import {
   saveSessions,
 } from './utils/storage';
 
+import avatarCaravela from './assets/images/avatar_caravela_1793907459922.jpg';
+import avatarFarol from './assets/images/avatar_farol_1793907460801.jpg';
+import mascotNavegador from './assets/images/mascot_navegador_1793907459309.jpg';
+import heroPacoArcos from './assets/images/hero_paco_arcos_1793907459731.jpg';
+
 const AVATAR_OPTIONS: {
   id: StudentProfile['avatarId'];
   label: string;
@@ -57,17 +62,17 @@ const AVATAR_OPTIONS: {
   {
     id: 'caravela',
     label: 'Astrolábio e Caravela',
-    src: '/src/assets/images/avatar_caravela_1793907459922.jpg',
+    src: avatarCaravela,
   },
   {
     id: 'farol',
     label: 'Farol do Bugio',
-    src: '/src/assets/images/avatar_farol_1793907460801.jpg',
+    src: avatarFarol,
   },
   {
     id: 'mascote',
     label: 'Coruja Navegadora',
-    src: '/src/assets/images/mascot_navegador_1793907459309.jpg',
+    src: mascotNavegador,
   },
 ];
 
@@ -509,7 +514,7 @@ export default function App() {
                 <div className="lg:col-span-5 surface-card bg-white border border-slate-200 rounded-2xl overflow-hidden min-h-[260px] flex items-center justify-center">
                   {!heroImgError ? (
                     <img
-                      src="/src/assets/images/hero_paco_arcos_1793907459731.jpg"
+                      src={heroPacoArcos}
                       alt="Ilustração da costa de Paço de Arcos com caravela e Farol do Bugio"
                       referrerPolicy="no-referrer"
                       onError={() => setHeroImgError(true)}
@@ -573,7 +578,7 @@ export default function App() {
                 <div className="flex items-center gap-4 mb-5">
                   {!a11y.focusMode && (
                     <img
-                      src="/src/assets/images/mascot_navegador_1793907459309.jpg"
+                      src={mascotNavegador}
                       alt="Mascote Coruja Navegadora"
                       referrerPolicy="no-referrer"
                       className="w-14 h-14 rounded-2xl object-cover border border-slate-200 shrink-0"
